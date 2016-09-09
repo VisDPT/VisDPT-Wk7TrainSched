@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+	<!-- BOOTSTRAP Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!--CSS STYLESHEET -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+     <!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+
+    <!-- Added link to the jQuery Library -->
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script> 
+</head>
+
+<body>
+	<div class="jumbotron" style="background-color: black; color: white">
+		<h1 class="text-center">Train Schedule</h1>
+		<h3 class="text-center">Info on your next train!</h3>
+	</div>
+
+	<div id ="table">
+		<table class="table table-striped table-hover">
+			<thead>	
+				<tr>
+					<th>Train Name</th>
+					<th>Destination</th>
+					<th>Frequency (min)</th>
+					<th>Next Arrival</th>
+					<th>Minutes Away</th>
+				</tr>
+			</thead>
+	<!--
+				<tr>
+		            <td> Trenton Express</td>
+		            <td>Trenton</td>
+		            <td>25</td>
+		            <td> </td>
+		            <td>  </td>
+		        </tr>
+		        <tr>
+		            <td> Oregon Trail</td>
+		            <td>Salem, Oregon</td>
+		            <td>3600</td>
+		            <td> </td>
+		            <td>   </td>
+		        </tr>
+
+		        <tr>
+		            <td> Midnight Carriage</td>
+		            <td> Philadelphia</td>
+		            <td> 15</td>
+		            <td>  </td>
+		            <td>   </td>
+		        </tr> -->
+		    <tbody>    
+				<tr>
+		            <td class="name"></td>
+		            <td class="dest"></td>
+		            <td class="frequency"></td>
+		            <td class="nextArr"></td>
+		            <td class="minsAway"></td>
+		        </tr>
+		    </tbody>
+		</table>
+	</div>
+
+	<div id="form">
+		<form>
+			<div class="form-group">
+			    <label for="nameInput">Train Name</label>
+			    <input type="text" class="form-control" id="trainNameInput" placeholder="Train Name">
+			</div>
+			<div class="form-group">
+			    <label for="destInput">Destination</label>
+			    <input type="text" class="form-control" id="destinationInput" placeholder="Destination">
+			</div>
+			<div class="form-group">
+			    <label for="firstInput">First Train Time(HH:mm - military time)</label>
+			    <input type="text" class="form-control" id="firstTrainInput" placeholder="First Time">
+			</div>
+			<div class="form-group">
+			    <label for="freqInput">Frequency (min)</label>
+			    <input type="text" class="form-control" id="frequencyInput" placeholder="Frequency">
+			</div>
+
+			<button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
+		</form>
+	</div>
+
+
+
+
+
+
+	<!-- Javascript  -->
+    <script src="assets/javascript/logic.js"> </script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.3.1/firebase.js"></script>
+	
+	<!-- Moment.js Reference -->
+	<!-- <script src="http://momentjs.com/downloads/moment.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<!-- Added link to the jQuery Library -->
+   	<script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+
+	<!--JQuery
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>   -->
+
+
+
+</body>
