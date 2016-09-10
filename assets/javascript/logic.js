@@ -6,7 +6,15 @@
 //Firebase - initialize, Set,
 
 //=================== Initialize Firebase ========================//
+  var config = {
+    apiKey: "AIzaSyA8vgqpOYD2uK0lLtWmKLpgAM9c4IPzmmQ",
+    authDomain: "train-schedule-wk7-2bbfb.firebaseapp.com",
+    databaseURL: "https://train-schedule-wk7-2bbfb.firebaseio.com",
+    storageBucket: "train-schedule-wk7-2bbfb.appspot.com",
+  };
+  firebase.initializeApp(config);
 
+  var database = firebase.database();
 
 //=================== ON CLICK FUNCTION ========================//
 $('#addTrainBtn').on("click", function(){
